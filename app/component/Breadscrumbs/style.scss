@@ -1,0 +1,29 @@
+.breadscrumbs {
+	margin-bottom: 30px;
+	& ul {
+		display: flex;
+		flex-direction: row;
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		gap: 30px;
+	}
+	& li {
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 17px;
+		& a {
+			color: $gray;
+			text-decoration: none;
+			transition: all 0.3s ease-in-out;
+		}
+		&:hover {
+			& a {
+				color: $primary;
+			}
+		}
+	}
+	&--current {
+		color: $primary;
+	}
+}

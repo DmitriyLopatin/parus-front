@@ -1,0 +1,42 @@
+.burger{
+    width: 50px;
+    height: 50px;
+    background: #F7F8FD;
+    transition: $transition;
+    border-radius: 50%;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    // justify-content: center;
+    padding: 17px;
+    cursor: pointer;
+    p{
+        border-bottom: 1.5px solid $secondary;
+        margin-bottom: 5px;
+        width: 100%;
+        transition: $transition;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+    &__active{
+        background: $secondary;
+        transition: $transition;
+        p{
+            border-color: white;
+        }
+        .burger-first{
+            width: 50%;
+            transition: $transition;
+        }
+        .burger-second{
+            width: 100%;
+            transition: $transition;
+        }
+        .burger-third{
+            width: 70%;
+            transition: $transition;
+        }
+    }
+    
+}

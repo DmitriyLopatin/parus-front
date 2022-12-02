@@ -1,0 +1,256 @@
+@import "_variables.scss";
+@import "./fonts.scss";
+@import "./c-btn.scss";
+@import "./input.scss";
+@import "../app/component/wrapper/Wrapper.scss";
+@import "../app/component/burger/Burger.scss";
+@import "../app/component/wrapperAdmin/WrapperAdmin.scss";
+@import "../app/component/Backdrop/style.scss";
+@import "../app/component/Breadscrumbs/style.scss";
+@import "../app/pages/authorization/Authorization.scss";
+@import "../app/pages/registration/Registration.scss";
+@import "../app/pages/adminPages/AdminPages.scss";
+@import "../app/pages/userPages/UserPages.scss";
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+html,
+body {
+	padding: 0;
+	margin: 0;
+	height: 100vh;
+	font-family: "Gilroy";
+	font-weight: 600;
+	color: $primary;
+}
+ul li {
+	list-style: none;
+	margin: 0;
+}
+
+// #__next{
+//   min-height: 100%;
+// }
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.none {
+	display: none;
+}
+table {
+	border-collapse: collapse;
+	width: 100%;
+	margin-top: 25px;
+	tr {
+		td {
+			padding: 10px 15px;
+		}
+	}
+	thead {
+		background-color: $ghostWhite;
+		color: $sapphire;
+		font-size: 12px;
+		line-height: 15px;
+		tr {
+			td {
+				text-transform: uppercase;
+				& p {
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					gap: 5px;
+					& span {
+						cursor: pointer;
+					}
+				}
+			}
+		}
+		tr {
+			td:first-child {
+				border-bottom-left-radius: 10px;
+				border-top-left-radius: 10px;
+			}
+			td:last-child {
+				border-bottom-right-radius: 10px;
+				border-top-right-radius: 10px;
+			}
+		}
+	}
+	tbody {
+		color: $primary;
+		font-size: 14px;
+		line-height: 18px;
+		font-weight: 500;
+		tr {
+			border-bottom: 1px solid$ghostWhite;
+		}
+	}
+}
+
+.pagination {
+	margin-top: 30px;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 30px;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 14px;
+	color: $gray;
+	& p {
+		display: flex;
+		flex-direction: row;
+		gap: 5px;
+		white-space: nowrap;
+		& span {
+			font-weight: 600;
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-start;
+			align-items: center;
+			gap: 5px;
+			cursor: pointer;
+		}
+	}
+	&__dropdown {
+		position: relative;
+		&-show {
+			position: absolute;
+			top: 20px;
+			background-color: $ghostWhite;
+			padding: 10px;
+			border-radius: 10px;
+			transition: all 0.3s ease-in-out;
+			& li {
+				white-space: nowrap;
+			}
+		}
+		&-arrow {
+			transform: rotate(0deg);
+			transition: all 0.3s ease-in-out;
+			&-active {
+				transform: rotate(180deg);
+				transition: all 0.3s ease-in-out;
+			}
+		}
+	}
+}
+
+.c-modal-title {
+	margin-bottom: 30px;
+	font-weight: 600;
+	font-size: 32px;
+	line-height: 39px;
+	color: $primary;
+}
+.checkbox {
+	border: 1px solid $sapphire;
+	border-radius: 4px;
+	width: 18px;
+	height: 18px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	svg {
+		display: none;
+	}
+	&__checked {
+		border-color: $secondary;
+		svg {
+			display: inline;
+		}
+	}
+}
+
+.status {
+	font-weight: 500;
+	font-size: 10px;
+	line-height: 18px;
+	color: #ffffff;
+	border-radius: 10px;
+	padding: 5px 15px;
+	&__secondary {
+		background-color: $secondary;
+	}
+	&__green {
+		background-color: $light-green;
+	}
+	&__gray {
+		background-color: $gray;
+	}
+	&__warn {
+		background-color: $red;
+	}
+}
+
+.icon {
+	cursor: pointer;
+	width: 24px;
+	height: 24px;
+}
+
+.filter {
+	background: $ghostWhite;
+	border-radius: 15px;
+	padding: 27px 22px;
+	& h4 {
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 20px;
+		color: $gray;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: center;
+		gap: 15px;
+	}
+}
+
+// .c-btn {
+// 	background-color: transparent;
+// 	border: 1px solid $secondary;
+// 	border-radius: 10px;
+// 	font-weight: 600;
+// 	font-size: 16px;
+// 	line-height: 20px;
+// 	color: $secondary;
+// 	padding: 12px;
+// 	cursor: pointer;
+// 	&__secondary {
+// 		background-color: $secondary;
+// 		color: white;
+// 	}
+// 	&__green {
+// 		background-color: $light-green;
+// 		border-color: $light-green;
+// 		color: white;
+// 	}
+// 	&__warn {
+// 		background-color: $red;
+// 		border-color: $red;
+// 		color: white;
+// 	}
+// 	&__dark {
+// 		background-color: $primary;
+// 		border-color: $primary;
+// 		color: white;
+// 	}
+// }
+
+.access {
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 18px;
+	&__secondary {
+		color: $secondary;
+	}
+	&__green {
+		color: $light-green;
+	}
+}

@@ -1,0 +1,116 @@
+.control-panel {
+	&__table {
+		background: #ffffff;
+		border: 1px solid $ghostWhite;
+		box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.03);
+		border-radius: 25px;
+		padding: 35px;
+		margin-top: 50px;
+		&-title {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			& span {
+				cursor: pointer;
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				align-items: center;
+				gap: 10px;
+				font-weight: 600;
+				font-size: 16px;
+				line-height: 18px;
+				color: $secondary;
+			}
+		}
+	}
+}
+
+.filter__items {
+	margin-top: 20px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	gap: 10px;
+}
+
+.filter__reset {
+	cursor: pointer;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 18px;
+	color: $secondary;
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px dashed $secondary;
+	outline: none;
+	max-width: 67px;
+}
+
+.data__actions {
+	margin-top: 30px;
+	margin-bottom: 20px;
+	display: flex;
+	flex-direction: row;
+	gap: 20px;
+}
+
+.modal-notification {
+	margin-bottom: 30px;
+	background: $ghostWhite;
+	border-radius: 25px;
+	padding: 25px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	&h5 {
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 20px;
+		color: $primary;
+	}
+	&__info {
+		display: flex;
+		flex-direction: row;
+		gap: 20px;
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 14px;
+		color: $gray;
+		&-item {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			gap: 8px;
+		}
+	}
+	p {
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 22px;
+		color: $primary;
+	}
+}
+
+.profile {
+	&__info {
+		margin-top: 30px;
+		background: $ghostWhite;
+		border-radius: 15px;
+		padding: 40px;
+	}
+}
+
+.input__password {
+	position: relative;
+	& p {
+		position: absolute;
+		font-weight: 600;
+		font-size: 14px;
+		line-height: 17px;
+		color: $secondary;
+		right: 20px;
+		bottom: 15px;
+		cursor: pointer;
+	}
+}
