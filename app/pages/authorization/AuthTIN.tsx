@@ -43,7 +43,7 @@ const AuthTIN = () => {
         <input type="password" className={errors.password ? "input_wrapper-error" : ""}{...register("password", { required: "Заполните обязательное поле", })} />
         {errors.password && (<p className="input_wrapper-error">{errors.password.message}</p>)}
       </div>
-      <button type="submit" className="c-btn c-btn__secondary">Войти</button>
+      <button type="submit" className="c-btn c-btn__secondary">Войтиииииииииииииии</button>
     </form>
   )
 }
